@@ -12,7 +12,8 @@
     <module>cloud-consumer-order80</module>
     <module>cloud-api-commons</module>
     <module>cloud-eureka-server-7001</module>
-      <module>cloud-eureka-server-7002</module>
+    <module>cloud-eureka-server-7002</module>
+    <module>cloud-nacos-config</module>
   </modules>
   <packaging>pom</packaging>
 
@@ -32,7 +33,7 @@
 
 
 
-<!--  子模块继承后,: 锁定版本+ 子module不用写groupId和version-->
+<!-- dependencyManagement 主要用于 子模块继承后: 锁定版本+ 子module不用写groupId和version-->
 <dependencyManagement>
   <dependencies>
     <dependency>

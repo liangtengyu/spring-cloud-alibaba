@@ -18,9 +18,19 @@ public class PaymentController {
     @Value("${server.port}")
     String port;
 
+    @Value("${test.name}")
+    String name;
+
 
 @Resource
     PaymentDao paymentDao;
+
+    @GetMapping("/test")
+    public CommonResult test() {
+        log.info(name);
+            return new CommonResult(444, name);
+
+    }
 
     @PostMapping("/payment/create")
     public CommonResult create(@RequestBody Payment payment) {
